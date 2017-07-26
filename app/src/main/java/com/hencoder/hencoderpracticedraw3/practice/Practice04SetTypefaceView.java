@@ -27,7 +27,7 @@ public class Practice04SetTypefaceView extends View {
 
     {
         paint.setTextSize(60);
-
+        //字体格式从资源文件中获取
         typeface = Typeface.createFromAsset(getContext().getAssets(), "Satisfy-Regular.ttf");
     }
 
@@ -38,10 +38,13 @@ public class Practice04SetTypefaceView extends View {
         // 使用 Paint.setTypeface() 来设置不同的字体
 
         // 第一处：填入 null 来设置默认字体
+        paint.setTypeface(null);
         canvas.drawText(text, 50, 100, paint);
         // 第二处：填入 Typeface.SERIF 来设置衬线字体（宋体）
+        paint.setTypeface(Typeface.SERIF);
         canvas.drawText(text, 50, 200, paint);
         // 第三处：填入 typeface 对象来使用 assets 目录下的 "Satisfy-Regular.ttf" 文件
+        paint.setTypeface(typeface);
         canvas.drawText(text, 50, 300, paint);
     }
 }

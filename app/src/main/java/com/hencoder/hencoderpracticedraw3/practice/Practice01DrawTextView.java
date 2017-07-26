@@ -9,7 +9,7 @@ import android.view.View;
 
 public class Practice01DrawTextView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    String text = "Hello HenCoder";
+    String text = "Hello HenCoder Prictice By Jing";
 
     public Practice01DrawTextView(Context context) {
         super(context);
@@ -24,7 +24,7 @@ public class Practice01DrawTextView extends View {
     }
 
     {
-        paint.setTextSize(60);
+        paint.setTextSize(20);
     }
 
     @Override
@@ -33,5 +33,7 @@ public class Practice01DrawTextView extends View {
 
         // 使用 drawText() 来绘制文字
         // 文字坐标： (50, 100)
+        //参数：需要绘制的文字、文字显示的位置（x,y），画笔
+        canvas.drawText(text,50,100,paint);
     }
 }
